@@ -1,4 +1,4 @@
-module github.com/benhunterco/apistructs v0.0.0
+module github.com/benhunterco/apistructs
 
 go 1.22.5
 
