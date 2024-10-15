@@ -1,0 +1,27 @@
+syntax= "proto3";
+option go_package = "github.com/benhunterco/apistructs";
+
+package apistructs;
+
+service ApiStructs {
+
+    //satellite crud
+    rpc CreateSatellite (Satellite) returns (ID) {}
+    rpc ReadSatellite (ID) returns (Satellite) {}
+    rpc UpdateSatellite (Satellite) returns (ID) {}
+    rpc DeleteSatellite (ID) returns (ID) {}
+
+}
+
+message Satellite {
+    string name = 1;
+    string tle_line_1 = 2;
+    string tle_line_2 = 3;
+    string id = 4;
+    bool propagating = 5;
+    string norad_cat_id = 6;
+}
+
+message ID {
+    string id = 1;
+}
